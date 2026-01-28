@@ -44,6 +44,11 @@ window.addEventListener('orientationchange', () => {
    Initial States (prevent FOUC)
    ============================================= */
 function setInitialStates() {
+    // Hero video starts slightly zoomed in
+    gsap.set('.hero-video', {
+        scale: 1.1
+    });
+
     // Hero elements start hidden
     gsap.set([
         '.hero-title',
@@ -137,6 +142,19 @@ function handleReducedMotionChange(event) {
    Hero Section Animation
    ============================================= */
 function initHeroAnimation() {
+    // Subtle zoom animation on hero video
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        gsap.fromTo(heroVideo,
+            { scale: 1.1 },
+            {
+                scale: 1,
+                duration: 10,
+                ease: 'power1.out'
+            }
+        );
+    }
+
     const heroTl = gsap.timeline({
         defaults: {
             ease: 'power3.out',
@@ -463,6 +481,21 @@ function initScrollReveal() {
 function initParallax() {
     // Skip parallax on mobile for performance
     if (isMobile) return;
+
+    // Hero video parallax - slower scroll creates depth
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        gsap.to(heroVideo, {
+            y: 100,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            }
+        });
+    }
 
     // Hero wave parallax
     const heroWave = document.querySelector('.hero-wave svg');

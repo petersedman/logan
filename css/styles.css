@@ -415,6 +415,89 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+/* Hero Background Video/Image */
+.hero-media-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Fallback for when video doesn't load - uses poster image */
+.hero-media-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Semi-transparent overlay for text readability */
+.hero-media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.85) 40%,
+        rgba(240, 253, 250, 0.80) 100%
+    );
+    z-index: 1;
+}
+
+/* Tablet and mobile adjustments for video */
+@media (max-width: 968px) {
+    .hero-media-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.93) 0%,
+            rgba(255, 255, 255, 0.88) 50%,
+            rgba(240, 253, 250, 0.85) 100%
+        );
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-media-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.90) 50%,
+            rgba(240, 253, 250, 0.88) 100%
+        );
+    }
+}
+
+/* Reduced motion - pause video */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video {
+        display: none;
+    }
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
