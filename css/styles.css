@@ -1010,9 +1010,6 @@ h1, h2, h3, h4, h5, h6 {
 .app-button-img {
     display: inline-block;
     transition: transform var(--transition-base);
-    overflow: hidden;
-    border-radius: 8px;
-    height: 40px;
 }
 
 .app-button-img:hover {
@@ -1020,9 +1017,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .app-button-img img {
-    height: 48px;
+    height: 44px;
     width: auto;
-    margin: -4px;
+    display: block;
 }
 
 /* Phone Mockup */
