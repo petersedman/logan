@@ -1973,6 +1973,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
+   What Makes Us Different Section
+   ============================================= */
+.what-makes-different {
+    background: var(--color-white);
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.difference-item {
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: flex-start;
+}
+
+.difference-icon {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.difference-item p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.difference-footnote {
+    margin-top: var(--spacing-6);
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    text-align: center;
+}
+
+/* =============================================
    Testimonials Section
    ============================================= */
 .testimonials {
