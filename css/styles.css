@@ -2770,6 +2770,23 @@ a.blog-card {
     color: var(--color-primary-dark);
 }
 
+/* Ensure buttons maintain their proper colors */
+.article-body .btn,
+.article-cta .btn {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.article-body .btn-primary,
+.article-cta .btn-primary {
+    color: var(--color-white);
+}
+
+.article-body .btn-outline,
+.article-cta .btn-outline {
+    color: var(--color-primary);
+}
+
 /* Callout Boxes */
 .callout {
     padding: var(--spacing-6);
