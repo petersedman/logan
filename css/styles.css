@@ -1387,6 +1387,17 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
 }
 
+.input-group .form-input {
+    padding-right: calc(var(--spacing-4) + 2.5em);
+    -moz-appearance: textbox;
+}
+
+.input-group .form-input::-webkit-inner-spin-button,
+.input-group .form-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .form-input,
 .form-select,
 .form-textarea {
@@ -1459,6 +1470,8 @@ h1, h2, h3, h4, h5, h6 {
 .checkbox-label {
     font-size: var(--font-size-base);
     line-height: 1.5;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .checkbox-option.consent {

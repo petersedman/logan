@@ -444,7 +444,7 @@ function validateCurrentStep() {
             // Validate sex
             const sex = document.querySelector('input[name="sex"]:checked');
             if (!sex) {
-                errorMessage = 'Please select your sex';
+                errorMessage = 'Please select your sex assigned at birth';
                 isValid = false;
             }
             break;
