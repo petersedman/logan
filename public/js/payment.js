@@ -4,7 +4,7 @@
 (function() {
     'use strict';
 
-    var WORKER_URL = 'https://loganhealth-payments.misty-heart-ac54.workers.dev';
+    var WORKER_URL = 'https://loganhealth-payments-production.misty-heart-ac54.workers.dev';
 
     var PRODUCT_NAMES = {
         wegovy: 'Wegovy (Semaglutide)',

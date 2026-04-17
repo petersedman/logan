@@ -7,7 +7,7 @@
 (function() {
     'use strict';
 
-    var WORKER_URL = 'https://loganhealth-payments.misty-heart-ac54.workers.dev';
+    var WORKER_URL = 'https://loganhealth-payments-production.misty-heart-ac54.workers.dev';
     var MAX_POLL_ATTEMPTS = 10;
     var POLL_INTERVAL_MS = 2000;
 
